@@ -5,7 +5,7 @@
 -- Kommentar 3
 
 /* Datenbanken auf Server anzeigen */
-
+SHOW DATABASES;
 
 /* DB boo löschen, falls vorhanden*/
 

@@ -8,7 +8,7 @@
 SHOW DATABASES;
 
 /* DB boo löschen, falls vorhanden*/
-
+DROP DATABASE boo;
 
 /* DB boo anlegen, falls noch nicht vorhanden*/
 

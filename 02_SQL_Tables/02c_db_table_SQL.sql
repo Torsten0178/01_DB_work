@@ -1,8 +1,9 @@
+\!cls
 /* ------  Strukturen ----- */
-\! cls
+
 /* 	 
-	NULL wird nicht mehr zugelassen
-    DEFAULT-Werte eintragen
+	Doppelte DS werden nicht mehr zugelassen
+    UNIQUE
 */
 
 /* DB boo löschen, falls vorhanden*/

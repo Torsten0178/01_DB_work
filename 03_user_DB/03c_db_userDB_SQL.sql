@@ -17,17 +17,11 @@ CREATE TABLE IF NOT EXISTS boo.users
 DESCRIBE boo.users;
 
 /* Daten */
-INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('johndoe123', 'Doe', 'John', '1234');
-
-INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('emilybrown22', 'Brown', 'Emily', '7xU#');
-
-INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('michaelsmith7', 'Smith', 'Michael', 'user1234');
+INSERT INTO boo.users (userName, familyName, firstName, userPwd) VALUES 
+('johndoe123', 'Doe', 'John', SHA1('1234')),
+('emilybrown22', 'Brown', 'Emily', SHA1('7xU#')),
+('michaelsmith7', 'Smith', 'Michael', SHA1('user1234'));
 
 
 /* Inhalte : Ergebnistabelle */
 SELECT * FROM boo.users;
-
-

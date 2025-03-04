@@ -1,4 +1,4 @@
-\! cls
+\! cls\! cls
 # Vorbereitung SELECT 
 
 

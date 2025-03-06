@@ -8,7 +8,7 @@ SELECT
    MIN(price) AS "Min. Preis"
 FROM stocks.ccc
 ;
-*/
+
 
 -- WELCHE Aktie ist am teuersten/günstigsten ?
 -- 1. Subquery
@@ -17,7 +17,7 @@ FROM stocks.ccc
 -- SELECT MAX(price) FROM stocks.ccc;
 -- SELECT MIN(price) FROM stocks.ccc;
 
-/*
+/**/
 SELECT
     ticker AS SYM,
     c_name Unternehmen,
@@ -27,8 +27,6 @@ FROM stocks.ccc
 -- WHERE price = (SELECT MAX(price) FROM stocks.ccc) -- max
 WHERE price = (SELECT MIN(price) FROM stocks.ccc)
 ;
-*/
-
 
 /*
 SELECT
@@ -40,7 +38,6 @@ FROM stocks.ccc
 ORDER BY price ASC
 LIMIT 1
 ;
-*/
 
 
 -- Welches Unternehmen hat die längste Div.-Historie ?

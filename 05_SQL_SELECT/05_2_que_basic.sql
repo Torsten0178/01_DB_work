@@ -1,3 +1,4 @@
+\! cls
 /* QUERIES Basic */
 
 /*
@@ -14,11 +15,12 @@ Ausgabe beschränken
 -- Kombinationen aus mehreren Feldern in neues Feld 
 -- hier mit Verknüpfung CONCAT() // String-Fkt.
 SELECT
+   id AS "ID",
    ticker AS "SYM",
-   -- price AS "Kurs in $",
-   c_name AS Unternehmen
+   price AS "Kurs in $",
+   -- c_name AS Unternehmen
    -- industry Branche
-   -- concat( sector, " | ", industry) AS "Operations"
+   concat( sector, " | ", industry) AS "Operations"
 FROM stocks.ccc
 -- LIMIT 200,10
 -- LIMIT 1

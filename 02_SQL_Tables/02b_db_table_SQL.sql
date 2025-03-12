@@ -1,5 +1,6 @@
-/* ------  Strukturen ----- */
 \! cls
+/* ------  Strukturen ----- */
+
 /* 	 
 	NULL wird nicht mehr zugelassen
     DEFAULT-Werte eintragen

@@ -1,6 +1,5 @@
-\! cls\! cls
 # Vorbereitung SELECT 
-
+\! cls
 
 DROP TABLE IF EXISTS boo.customers;
 
@@ -70,4 +69,6 @@ VALUES
 (48, 'Andreas Becker', 'Bahnhofsplatz 48', '0611/555555', 'andreas.becker@example.de', 31, 'Hessen', 'Frankfurt'),
 (49, 'Sabine Hoffmann', 'Rathausstraße 49', '0211/666666', 'sabine.hoffmann@example.de', 24, 'Nordrhein-Westfalen', 'Düsseldorf'),
 (50, 'Hans Schäfer', 'Schlossstraße 50', '089/777777', 'hans.schaefer@example.de', 33, 'Bayern', 'München');
+
+
 SELECT * FROM boo.customers;

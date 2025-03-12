@@ -1,29 +1,30 @@
+\! cls
 /*QUERIES - Distinct*/
 
--- alle Sektoren
+# alle Sektoren
 /*
 SELECT
     sector
 FROM stocks.ccc
-#ORDER BY sector ASC
+-- ORDER BY sector ASC
 LIMIT 50
 ;
 */
 
--- nur das 1. Auftreten eines Eintrags wird betrachtet
--- welche VERSCHIEDENE Sektoren gibt es?
+# nur das 1. Auftreten eines Eintrags wird betrachtet
+# welche VERSCHIEDENE Sektoren gibt es?
 /*
 SELECT
     DISTINCT sector Industriesektoren
 FROM stocks.ccc
-#ORDER BY sector ASC
+-- ORDER BY sector ASC
 ORDER BY Industriesektoren DESC
 LIMIT 50
 ;
 */
 
 
--- welche VERSCHIEDENEN Branchen gibt es?
+# welche VERSCHIEDENEN Branchen gibt es?
 /*
 SELECT
     DISTINCT industry Branchen
@@ -33,7 +34,7 @@ ORDER BY industry ASC
 ;
 */
 
--- welche VERSCHIEDENEN Auszahlungs-Rhythmen gibt es?
+# welche VERSCHIEDENEN Auszahlungs-Rhythmen gibt es?
 /*
 SELECT
     DISTINCT payouts "Auszahlungen p.a."
@@ -42,8 +43,7 @@ ORDER BY payouts ASC
 ;
 */
 
-
--- welche Unternehmen zahlen monatlich?
+# welche Unternehmen zahlen monatlich?
 /*
 SELECT
     industry Branche,

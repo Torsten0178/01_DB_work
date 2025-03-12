@@ -1,3 +1,4 @@
+\! cls
 /* String-Funktionen */
 
 /*
@@ -10,24 +11,24 @@
     LINK: https://dev.mysql.com/doc/refman/5.6/en/string-functions.html
 */
 
--- CONCAT() / Verknuepfung "string" + "string" ....
+# CONCAT() / Verknuepfung "string" + "string" ....
 /*
 SELECT
 	ticker AS "SYM",
     c_name "Unternehmen",
     concat("Ops: ",sector," : ",industry) "Operation"
 FROM stocks.ccc
-#ggf. Restriktionen
+# ggf. Restriktionen
 LIMIT 10;
 */
 
--- UPPER() --> alles in Großbuchstaben
+# UPPER() --> alles in Großbuchstaben
 /*
 SELECT
 	ticker AS "SYM",
     upper(c_name) "Unternehmen"
 FROM stocks.ccc
-#ggf. Restriktionen
+# ggf. Restriktionen
 LIMIT 10;
 */
 
@@ -38,12 +39,12 @@ SELECT
 	ticker AS "SYM",
     lower(c_name) "Unternehmen"
 FROM stocks.ccc
-#ggf. Restriktionen
+# ggf. Restriktionen
 LIMIT 10;
 */
 
 
--- LENGTH() / char_length()--> String-Laenge
+# LENGTH() / char_length()--> String-Laenge
 /*
 SELECT
 	ticker SYM,
@@ -57,8 +58,8 @@ LIMIT 20;
 */
 
 
--- REPLACE() --> Ersetzen von Stringanteilen
-/**/
+# REPLACE() --> Ersetzen von Stringanteilen
+/*
 SELECT
 	ticker AS "SYM",
     c_name "Unternehmen",
@@ -68,9 +69,9 @@ FROM stocks.ccc
 -- WHERE c_name LIKE "%Inc."
 WHERE c_name LIKE "%Corp."
 LIMIT 20;
+*/
 
-
--- TRIM() --> Trimmen vor/nach String (Whitespace) Siehe Link
+# TRIM() --> Trimmen vor/nach String (Whitespace) Siehe Link
 
 
 

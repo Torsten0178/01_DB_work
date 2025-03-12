@@ -1,3 +1,4 @@
+\! cls
 /* QUERIES - count()*/
 
 /* Links:
@@ -6,7 +7,7 @@
     https://dev.mysql.com/doc/refman/5.6/en/aggregate-functions.html#function_count-distinct
 */
 
--- WELCHE verschiedenen Sektoren gibt es?
+# WELCHE verschiedenen Sektoren gibt es?
 /*
 SELECT
     DISTINCT sector Industriesektoren
@@ -15,7 +16,7 @@ ORDER BY sector ASC
 ;
 */
 
--- WIEVIELE verschiedene Sektoren gibt es?
+# WIEVIELE verschiedene Sektoren gibt es?
 /*
 SELECT
     count(DISTINCT sector) "Anzahl Industriesektoren"
@@ -23,8 +24,8 @@ FROM stocks.ccc
 ;
 */
 
--- WELCHE verschiedenen Branchen ?
--- WIEVIELE verschiedene Branchen ?
+# WELCHE verschiedenen Branchen ?
+# WIEVIELE verschiedene Branchen ?
 /*
 SELECT
     DISTINCT industry Branchen
@@ -38,8 +39,8 @@ FROM stocks.ccc
 ;
 */
 
--- Wieviele VERSCHIEDENE Branchen gibt es 
--- in den jeweiligen Industriesektoren?
+# Wieviele VERSCHIEDENE Branchen gibt es 
+# in den jeweiligen Industriesektoren?
 /**/
 SELECT
     sector Industriesektoren, -- nicht aggregiert / organisch
@@ -49,4 +50,14 @@ WHERE sector LIKE "Co%" -- Filter in NICHT aggr.(organischen) Feldern
 GROUP BY sector -- bei Kombination organisch /aggr.
 HAVING Branchen > 10 -- Filter in aggr. Felder / nach GROUP
 ORDER by Branchen DESC
+;
+
+# Wieviele VERSCHIEDENE Unternehmen gibt es 
+# in den jeweiligen Branchen?
+SELECT
+    industry Branchen, -- nicht aggregiert / organisch
+    count(c_name) AS Unternehmen -- aggregiert / durch eine Fkt. entstanden
+FROM stocks.ccc
+GROUP BY Branchen -- bei Kombination organisch /aggr.
+ORDER by Unternehmen DESC
 ;

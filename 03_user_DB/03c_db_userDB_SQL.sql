@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS boo.users
 );
 
 /* Struktur */
-DESCRIBE boo.users;
+-- DESCRIBE boo.users;
 
 /* Daten */
 INSERT INTO boo.users (userName, familyName, firstName, userPwd) VALUES 
@@ -24,4 +24,24 @@ INSERT INTO boo.users (userName, familyName, firstName, userPwd) VALUES
 
 
 /* Inhalte : Ergebnistabelle */
-SELECT * FROM boo.users;
+-- SELECT * FROM boo.users;
+
+# Spaltennamen
+SELECT
+firstName,
+userName,
+userPwd
+FROM boo.users
+;
+
+# Alias in den Spaltennamen
+SELECT
+firstName AS "Vorname",
+userName AS 'Namen',
+userPwd AS Passwort
+FROM boo.users
+;
+
+
+
+

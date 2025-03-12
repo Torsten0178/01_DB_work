@@ -24,7 +24,11 @@ VALUES ('emilybrown22', 'Brown', 'Emily');
 
 INSERT INTO boo.users (userName, familyName, firstName) 
 VALUES ('michaelsmith7', 'Smith', 'Michael');
+
 INSERT INTO boo.users (userName, familyName, firstName) 
 VALUES ('johndoe1234', 'Doe', 'Johnny');
+
 /* Inhalte : Ergebnistabelle */
 SELECT * FROM boo.users;
+
+

@@ -2,7 +2,9 @@
 /* ------  Strukturen ----- */
 
 /* 	 
-	NULL wird nicht mehr zugelassen
+	Tabelle mit id als PRIMARY KEY --> 
+    KEINE Duplikate moeglich
+    AUTO_INCREMENT ++
     DEFAULT-Werte eintragen
 */
 
@@ -14,24 +16,24 @@ DROP TABLE IF EXISTS boo.test;
 CREATE TABLE IF NOT EXISTS boo.test
 (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    name VARCHAR(20) NOT NULL DEFAULT "TBA",
 	age INT NOT NULL DEFAULT 0
 );
 
 /* Alle Tabellen in der DB anzeigen */
-SHOW TABLES;
+SHOW TABLES FROM boo;
 
 /* Struktur der Tabelle anzeigen */
-DESCRIBE test;
+DESCRIBE boo.test;
 
 /* ----- Daten ------- */
-INSERT INTO test(name,age) VALUES ("Maxine",29);
-INSERT INTO test(age,name) VALUES (35,"Max");
-INSERT INTO test VALUES ();
+INSERT INTO boo.test(name,age) VALUES ("Maxine",29);
+INSERT INTO boo.test(age,name) VALUES (35,"Max");
+INSERT INTO boo.test VALUES ();
 
 -- ABER: Doppelte Datensätze werden zugelassen !
-INSERT INTO test(age,name) VALUES (35,"Max");
+INSERT INTO boo.test(age,name) VALUES (35,"Max");
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM test;
+SELECT * FROM boo.test;
 
